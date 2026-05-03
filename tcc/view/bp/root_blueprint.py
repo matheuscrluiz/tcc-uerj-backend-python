@@ -10,6 +10,7 @@ from ..api.tipo_usuario_api import api as tipo_usuario_api
 from ..api.usuario_api import api as usuario_api
 from ..api.biblioteca_api import api as biblioteca_api
 from ..api.andar_api import api as andar_api
+from ..api.tipo_estacao_api import api as tipo_estacao_api
 
 # ---------------------------->>
 # Constants
@@ -63,6 +64,7 @@ api.add_namespace(tipo_usuario_api)
 api.add_namespace(usuario_api)
 api.add_namespace(biblioteca_api)
 api.add_namespace(andar_api)
+api.add_namespace(tipo_estacao_api)
 
 # ---------------------------->>
 # Inicializa a aplicação
