@@ -7,6 +7,7 @@ from tcc.util.custom_http_messages import (
 from ...util.constants import BLUE_PRINT_BASE_URL
 from ..api.area_api import api as area_api
 from ..api.tipo_usuario_api import api as tipo_usuario_api
+from ..api.usuario_api import api as usuario_api
 
 # ---------------------------->>
 # Constants
@@ -57,6 +58,7 @@ api = Api(bp, version=API_VERSION, base_url=BLUE_PRINT_BASE_URL,
 # ---------------------------->>
 api.add_namespace(area_api)
 api.add_namespace(tipo_usuario_api)
+api.add_namespace(usuario_api)
 
 # ---------------------------->>
 # Inicializa a aplicação
