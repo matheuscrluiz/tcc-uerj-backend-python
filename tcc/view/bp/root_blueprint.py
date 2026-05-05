@@ -13,6 +13,7 @@ from ..api.andar_api import api as andar_api
 from ..api.tipo_estacao_api import api as tipo_estacao_api
 from ..api.estacao_api import api as estacao_api
 from ..api.reserva_api import api as reserva_api
+from ..api.checkin_api import api as checkin_api
 
 # ---------------------------->>
 # Constants
@@ -67,8 +68,9 @@ api.add_namespace(usuario_api)
 api.add_namespace(biblioteca_api)
 api.add_namespace(andar_api)
 api.add_namespace(tipo_estacao_api)
-api.add_namespace(reserva_api)
 api.add_namespace(estacao_api)
+api.add_namespace(reserva_api)
+api.add_namespace(checkin_api)
 
 # ---------------------------->>
 # Inicializa a aplicação
