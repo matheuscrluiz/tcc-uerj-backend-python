@@ -16,20 +16,22 @@ class UsuarioDAO(base.DAOBase):
         try:
             rotina = 'get_usuario'
             query = """
-                select id, ch_rede, nome, email, matricula, senha_hash,
-                       tipo_usuario_id, ativo,
-                       data_inclusao, data_alteracao,
-                       ch_usuario_inclusao, ch_usuario_alteracao
-                from usuario
+                select u.id, u.ch_rede, u.nome, u.email, u.matricula, u.senha_hash,
+                       u.tipo_usuario_id, u.ativo, t.codigo, t.descricao,
+                       u.data_inclusao, u.data_alteracao,
+                       u.ch_usuario_inclusao, u.ch_usuario_alteracao
+                from usuario u
+                join tipo_usuario t
+                    on u.tipo_usuario_id = t.id
             """
 
             parms_oracle = {}
 
             if id is not None:
-                query += " where id = %(id)s"
+                query += " where u.id = %(id)s"
                 parms_oracle["id"] = id
 
-            query += " order by id"
+            query += " order by u.id"
 
             dataframe = pd.read_sql(
                 sql=query, con=self.get_connection(), params=parms_oracle)

@@ -14,6 +14,7 @@ from ..api.tipo_estacao_api import api as tipo_estacao_api
 from ..api.estacao_api import api as estacao_api
 from ..api.reserva_api import api as reserva_api
 from ..api.checkin_api import api as checkin_api
+from ..api.log_ocupacao_api import api as log_ocupacao_api
 
 # ---------------------------->>
 # Constants
@@ -71,6 +72,7 @@ api.add_namespace(tipo_estacao_api)
 api.add_namespace(estacao_api)
 api.add_namespace(reserva_api)
 api.add_namespace(checkin_api)
+api.add_namespace(log_ocupacao_api)
 
 # ---------------------------->>
 # Inicializa a aplicação
